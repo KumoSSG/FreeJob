@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registrazione Utente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(seghero.jpg);
+            padding: 40px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-top: 25px;
+            padding: 15px;
+            border: 1px dashed #aaa;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Registrazione</h2>
+        <form id="registrationForm">
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="nome">Cognome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Numero di telefono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="posizione">Posizione (es. città)</label>
+            <input type="text" id="posizione" name="posizione">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Conferma Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="tipoUtente">Tipo utente</label>
+            <select id="tipoUtente" name="tipoUtente" onchange="toggleLavoratore()">
+                <option value="cliente" selected>Cliente</option>
+                <option value="lavoratore">Lavoratore</option>
+            </select>
+
+            <label for="tipoCliente">Sei un'azienda o un privato?</label>
+            <select id="tipoCliente" name="tipoCliente" onchange="togglePartitaIVA()">
+                <option value="privato" selected>Privato</option>
+                <option value="azienda">Azienda</option>
+            </select>
+
+            <div id="partitaIVAContainer" style="display:none;">
+                <label for="partitaIVA">Partita IVA</label>
+                <input type="text" id="partitaIVA" name="partitaIVA">
+            </div>
+
+            <!-- Sezione per Lavoratori -->
+            <div id="lavoratoreSection" class="section" style="display: none;">
+                <h3>Sezione Lavoratore</h3>
+
+                <label for="titoli">Titoli di studio (es. diploma, laurea, master)</label>
+                <textarea id="titoli" name="titoli" rows="2"></textarea>
+
+                <label for="esperienze">Esperienze lavorative</label>
+                <textarea id="esperienze" name="esperienze" rows="3"></textarea>
+
+                <label for="cv">Competenze (breve descrizione del CV)</label>
+                <textarea id="cv" name="cv" rows="3"></textarea>
+
+                <label for="patenti">Disponibilità a spostarsi (es. Patente B, A, ecc.)</label>
+                <input type="text" id="patenti" name="patenti">
+
+                <label for="topic">Topic consigliato (assegnato in base al CV)</label>
+                <input type="text" id="topic" name="topic" placeholder="Verrà generato automaticamente" disabled>
+            </div>
+
+            <button type="submit">Registrati</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleLavoratore() {
+            const tipoUtente = document.getElementById("tipoUtente").value;
+            const lavoratoreSection = document.getElementById("lavoratoreSection");
+            lavoratoreSection.style.display = (tipoUtente === "lavoratore") ? "block" : "none";
+        }
+
+        function togglePartitaIVA() {
+            const tipoCliente = document.getElementById("tipoCliente").value;
+            const partitaIVAContainer = document.getElementById("partitaIVAContainer");
+            partitaIVAContainer.style.display = (tipoCliente === "azienda") ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

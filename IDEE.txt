@@ -1,0 +1,98 @@
+COSE DA SVILUPPARE =	
+	nome = freejob
+	mezzi di propaganda/pubblicità
+	struttura sito
+		- struttura html,css & javascript
+		- bacakend = mysql & php
+		- database = host in locale oppure supporti web come altervista
+		- dominio
+		- 1 solo database con molte tabelle
+	COLORI =
+		- sfondo marroncino
+	SITO =
+		- login
+			- email 
+			- password
+
+		- logout
+			- bottone logout
+
+		- registrazione
+			- nome e cognome
+			- password
+			- conferma password
+			- cliente (dafault e poi sezione in cui si decide se voler essere lavoratore o meno) o lavoratore
+			- email 
+			- numero di telefono	
+			- azienda o privato
+			- in caso di azienda specificare partita iva
+			- posizione
+			
+			- SI INSERISCONO SOLO SE SI VOGLIONO FARE DEI LAVORI
+				- competenze (CV) (titoli di studio Es. diploma, lauree, master) + esperienze lavorative + disponibilità di potersi spostare (patenti varie)
+				- sistema autonomo che in base alle competenze presenti nel cv oppure in base alle esperienze, decidere il topic meglio indicato per egli
+				- il lavoratore si può candidare per i lavori solo dopo la registrazione
+
+		- dashboard/bacheca (visualizzabile anche da chi non è loggato)
+			- vengono proposti i lavori più consigliati per l'utente/lavoratore (in primo piano) sottoforma di post-it stile card
+			- barra di ricerca
+			- footer con i contatti
+			- profilo
+		
+		- profilo
+			- i miei lavori
+			- i miei annunci		
+			- recensioni (giudizio martello o quadrato)		
+			- aggiungi-rimuovi-modifica-visulizza annuncio
+			- visualizza annunci/lavori portati a termine
+			- status lavori (da iniziare / in corso / terminato)
+			- ordina / separa lavori e annunci
+
+		- inserisci annuncio (CLIENTE)
+			- topic generale e topic specifico 
+			- titolo
+			- descrizione
+			- posizione del lavoro (opzionale) (domanda "posizione di default o no?, se no aggiungi posizione del lavoro")
+			- foto (scattate sul momento) oppure foto/icone di default 
+			- risorse (le può mettere il cliente oppure le devono mettere i lavoratori)
+			- budget 
+			- periodo di tempo e scadenza
+
+     		- rimuovi annuncio
+			- motivazioni default
+			- breve descrizione (opzionale)
+
+		- filtro topic 
+			- distinzione lavoro da remoto o di persona
+			- macro topic e topic specifico
+
+		- filtro posizione
+			- distinzione in base alla posizione del lavoro (stato / regione / provincia / città)
+
+		- candidature (lavoratore)
+			- visualizza annuncio
+			- se interessato si candida per quel lavoro
+		
+		- candidature (cliente)
+			- visualizza candidato o elenco candidati
+			- visualizza competenze dei singoli candidati
+			- seleziona 1 o più candidati in base all'annuncio
+			- una volta selezionato il lavoratore l'annuncio assume lo status di (in svolgimento)
+			- a lavoro terminato l'annuncio viene archiviato
+
+		- chat tra cliente e lavoratore	
+			- messaggi scritti
+			- foto
+			- eliminare chat
+
+		- pagamenti
+			- pagamenti in bonifico / paypall / apple pay
+
+
+
+PROGETTI FUTURI
+	- classifica (recensioni, guadagni, numero di lavori) [progetto futuro]
+	- mancia
+	- account verificato per aziende
+	- possibilità di trovare lavori a giornata ma anche impieghi fissi
+	- trattative sul budget
